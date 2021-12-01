@@ -31,7 +31,7 @@ public class TopicController {
 	}
 	
 	@PostMapping("/addtopics")
-	public void addTopic(@RequestBody ArrayList<Topic> newtopic) {
+	public void addTopic(@RequestBody Topic newtopic) {
 		topicServices.addTopicToList(newtopic);
 	}
 	

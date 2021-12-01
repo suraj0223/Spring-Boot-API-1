@@ -38,9 +38,9 @@ public class TopicServices {
 	}
 
 	// add topic to the list of topics
-	public void addTopicToList(ArrayList<Topic> topics) {
+	public void addTopicToList(Topic topics) {
 		// _topicList.addAll(topic);
-		topicRespository.saveAll(topics);
+		topicRespository.save(topics);
 	}
 
 	// update topic by id
