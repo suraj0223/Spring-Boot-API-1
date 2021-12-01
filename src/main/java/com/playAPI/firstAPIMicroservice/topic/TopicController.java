@@ -1,6 +1,7 @@
 package com.playAPI.firstAPIMicroservice.topic;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -25,7 +26,7 @@ public class TopicController {
 	}
 	
 	@GetMapping("/getAlltopics/{topicId}")
-	public Topic showTopicById(@PathVariable String topicId) {
+	public Optional<Topic> showTopicById(@PathVariable String topicId) {
 		return topicServices.getTopicById(topicId);
 	}
 	
